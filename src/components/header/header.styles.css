@@ -1,0 +1,32 @@
+.nav-bar {
+  height: 70px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  padding: 20px 60px;
+}
+.logo-container {
+  height: 100%;
+  width: 80px;
+}
+.logo-container img {
+  width: 100%;
+}
+
+
+.nav-options {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  cursor: pointer;
+}
+.nav-options > * {
+  padding: 10px 15px;
+  cursor: pointer;
+  text-transform: uppercase
+  ;
+}
+
