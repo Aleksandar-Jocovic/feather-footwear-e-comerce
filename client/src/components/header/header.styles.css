@@ -20,13 +20,19 @@
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
   cursor: pointer;
 }
 .nav-options > * {
   padding: 10px 15px;
   cursor: pointer;
-  text-transform: uppercase
-  ;
+  text-transform: uppercase;
 }
+
+.cart-icon {
+  width: 24px;
+  height: 24px;
+  fill: grey;
+}
+
 

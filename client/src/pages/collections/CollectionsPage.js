@@ -5,7 +5,7 @@ import CollectionPreview from '../../components/collection-preview/CollectionPre
 import collections from './collections-data';
 import './collections-page.styles.css';
 
-function Collections() {
+const CollectionsPage = () => {
   return (
     <div className="collections-page">
       {
@@ -17,4 +17,4 @@ function Collections() {
   )
 }
 
-export default Collections
+export default CollectionsPage;

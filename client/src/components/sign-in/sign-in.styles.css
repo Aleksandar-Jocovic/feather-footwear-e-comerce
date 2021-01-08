@@ -1,0 +1,10 @@
+.sign-in {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sign-in span {
+  margin: 10px 0 15px 0;
+}
+
