@@ -14,9 +14,13 @@ const CollectionItem = ({ item }) => {
       <div className="price-and-shop-button">
         <button>shop now</button>
         <span className="price">${price},00</span>
-      </div>
+
+              
+              
+              
+            </div>
     </div>
   )
 }
 
-export default CollectionItem
+export default CollectionItem;
