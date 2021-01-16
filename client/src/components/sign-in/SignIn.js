@@ -13,7 +13,7 @@ const SignIn = () => {
 		password: "",
 	});
 
-	const handleSubmit = (e) => {
+	const handleSubmit = e => {
 		e.preventDefault();
 		setUserCredentials({
 			email: "",
@@ -21,7 +21,7 @@ const SignIn = () => {
 		});
 	};
 
-	const handleChange = (e) => {
+	const handleChange = e => {
 		const { value, name } = e.target;
 		setUserCredentials({ ...userCredentials, [name]: value });
 	};
@@ -29,29 +29,31 @@ const SignIn = () => {
 	console.log(userCredentials);
 
 	return (
-		<div className="sign-in">
+		<div className='sign-in'>
 			<h3>I already have an account.</h3>
 			<span>Sing in with your email and password.</span>
 			<form onSubmit={handleSubmit}>
 				<FromInput
-					type="text"
-					name="email"
+					type='text'
+					name='email'
 					value={userCredentials.email}
 					handleChange={handleChange}
-					label="email"
+					label='email'
 				/>
 				<FromInput
-					type="password"
-					name="password"
+					type='password'
+					name='password'
 					value={userCredentials.password}
 					handleChange={handleChange}
-					label="password"
+					label='password'
 				/>
-				<CustomButton type="submit"> Sign in</CustomButton>
-				<CustomButton onClick={signInWithGoogle}>
-					{" "}
-					Sign in with Google
-				</CustomButton>
+				<div className='buttons'>
+					<CustomButton type='submit'> Sign in</CustomButton>
+					<CustomButton onClick={signInWithGoogle} isGoogleSignIn>
+						{" "}
+						Sign in with Google
+					</CustomButton>
+				</div>
 			</form>
 		</div>
 	);

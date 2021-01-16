@@ -1,4 +1,6 @@
 .signin-signup {
-  width: 100%;
-  padding: 20px 80px;
+	width: 100%;
+	padding: 20px 80px;
+	display: flex;
+	justify-content: space-between;
 }
