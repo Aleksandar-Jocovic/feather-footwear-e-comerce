@@ -1,38 +1,28 @@
 .nav-bar {
-  height: 70px;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 25px;
-  padding: 20px 60px;
+	height: 70px;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 25px;
+	padding: 20px 60px;
 }
 .logo-container {
-  height: 100%;
-  width: 80px;
+	height: 100%;
+	width: 80px;
 }
 .logo-container img {
-  width: 100%;
+	width: 100%;
 }
-
 
 .nav-options {
-  width: 50%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
+	width: 50%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 .nav-options > * {
-  padding: 10px 15px;
-  cursor: pointer;
-  text-transform: uppercase;
+	padding: 10px 15px;
+	cursor: pointer;
+	text-transform: uppercase;
 }
-
-.cart-icon {
-  width: 24px;
-  height: 24px;
-  fill: grey;
-}
-
-
