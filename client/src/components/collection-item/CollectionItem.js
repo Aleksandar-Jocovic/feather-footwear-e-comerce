@@ -1,26 +1,31 @@
-import React from 'react'
+import React from "react";
+import { connect } from "react-redux";
 
-import './collection-item.styles.css';
+import { addItem } from "../../redux/cart/cart.actions";
 
-const CollectionItem = ({ item }) => {
-  const { name, price, img } = item;
-  console.log(img)
-  return (
-    <div className="collection-item">
-      <div className="image" style={{
-        backgroundImage: `url(${img})`
-      }} />
-      <div className="name">{name}</div>
-      <div className="price-and-shop-button">
-        <button>shop now</button>
-        <span className="price">${price},00</span>
+import "./collection-item.styles.css";
 
-              
-              
-              
-            </div>
-    </div>
-  )
-}
+const CollectionItem = ({ item, addItem }) => {
+	const { name, price, img } = item;
+	console.log(img);
+	return (
+		<div className='collection-item'>
+			<div
+				className='image'
+				style={{
+					backgroundImage: `url(${img})`
+				}}
+			/>
+			<div className='name'>{name}</div>
+			<div className='price-and-shop-button'>
+				<button onClick={() => addItem(item)}>shop now</button>
+				<span className='price'>${price},00</span>
+			</div>
+		</div>
+	);
+};
 
-export default CollectionItem;
+const mapDispatchToProps = dispatch => ({
+	addItem: item => dispatch(addItem(item))
+});
+export default connect(null, mapDispatchToProps)(CollectionItem);
