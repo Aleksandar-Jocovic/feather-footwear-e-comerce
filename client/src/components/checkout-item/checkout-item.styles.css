@@ -22,7 +22,17 @@
 }
 
 .checkout-item .quantity {
-	padding-left: 20px;
+	display: flex;
+}
+
+.checkout-item .quantity .arrow {
+	cursor: pointer;
+	font-size: 23px;
+}
+
+.checkout-item .quantity .value {
+	margin: 0 10px;
+	align-self: center;
 }
 
 .checkout-item .remove-button {
