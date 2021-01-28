@@ -1,16 +1,26 @@
-import React from "react";
+import React from 'react';
+import { connect } from 'react-redux';
 
-import menuData from "./menu-data";
-import MenuItem from "../menu-item/MenuItem";
+import { createStructuredSelector } from 'reselect';
+import {
+	sekectHomeMenuSections,
+	selectHomeMenuSections
+} from '../../redux/home-menu/home-menu.selectors';
 
-import "./home-menu.styles.css";
+import menuData from './menu-data';
+import MenuItem from '../menu-item/MenuItem';
 
-const HomeMenu = () => (
-	<div className="home-menu">
-		{menuData.map(({ id, ...otherProps }) => (
+import './home-menu.styles.css';
+
+const HomeMenu = ({ sections }) => (
+	<div className='home-menu'>
+		{sections.map(({ id, ...otherProps }) => (
 			<MenuItem key={id} {...otherProps} />
 		))}
 	</div>
 );
 
-export default HomeMenu;
+const mapStateToProps = createStructuredSelector({
+	sections: selectHomeMenuSections
+});
+export default connect(mapStateToProps)(HomeMenu);
