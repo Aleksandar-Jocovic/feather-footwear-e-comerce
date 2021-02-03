@@ -1,11 +1,16 @@
-import COLLECTIONS_DATA from './collections-data';
+import CollectionsActionTypes from './collections.types';
 
 const INITIAL_STATE = {
-	collectionsData: COLLECTIONS_DATA
+	collectionsData: null
 };
 
 const collectionsReducer = (state = INITIAL_STATE, action) => {
 	switch (action.type) {
+		case CollectionsActionTypes.UPDATE_COLLECTIONS:
+			return {
+				...state,
+				collectionsData: action.payload
+			};
 		default:
 			return state;
 	}

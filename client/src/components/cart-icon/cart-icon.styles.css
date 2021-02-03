@@ -1,5 +1,6 @@
 .cart-icon {
 	position: relative;
+	padding: 10px 15px;
 	cursor: pointer;
 }
 .cart-icon .shopping-icon {

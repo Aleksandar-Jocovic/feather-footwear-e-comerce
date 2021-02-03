@@ -1,11 +1,15 @@
 .collection-preview {
-  min-width: 100%;
-  overflow: hidden;
-  margin-bottom: 50px;
+	min-width: 100%;
+	overflow: hidden;
+	margin-bottom: 50px;
 }
 
 .collection-preview .preview {
-  display: flex;
-  width: 100%;
-  justify-content: space-around;
-} 
+	display: flex;
+	width: 100%;
+	justify-content: space-around;
+}
+
+.collection-preview .title {
+	cursor: pointer;
+}

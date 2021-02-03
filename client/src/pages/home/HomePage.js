@@ -1,13 +1,13 @@
-import React from "react";
+import React from 'react';
 
-import HomeMenu from "../../components/home-menu/HomeMenu";
+import HomeMenu from '../../components/home-menu/HomeMenu';
 
-import "./home-page.styles.css";
+import { HomePageContainer } from './home-page-styles';
 
 const HomePage = () => (
-	<div className="home-page">
+	<HomePageContainer>
 		<HomeMenu />
-	</div>
+	</HomePageContainer>
 );
 
 export default HomePage;
