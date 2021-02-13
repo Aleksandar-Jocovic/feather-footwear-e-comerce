@@ -1,13 +1,13 @@
-import React from "react";
-import { connect } from "react-redux";
+import React from 'react';
+import { connect } from 'react-redux';
 
-import { addItem } from "../../redux/cart/cart.actions";
+import { addItem } from '../../redux/cart/cart.actions';
 
-import "./collection-item.styles.css";
+import './collection-item.styles.css';
 
 const CollectionItem = ({ item, addItem }) => {
 	const { name, price, img } = item;
-	console.log(img);
+
 	return (
 		<div className='collection-item'>
 			<div
