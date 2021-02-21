@@ -43,4 +43,8 @@ export const CustomButtonContainer = styled.button`
 	}
 
 	${getButtonStyles}
+
+	@media screen and (max-width: 800px) {
+		width: 100%;
+	}
 `;
