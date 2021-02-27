@@ -12,6 +12,8 @@ import { GlobalStyle } from './global.styles';
 import { checkUserSession } from './redux/user/user.actions';
 import { selectCurrentUser } from './redux/user/user.selector';
 
+import { selectCartItems } from './redux/cart/cart.selectors';
+
 const HomePage = lazy(() => import('./pages/home/HomePage'));
 const CollectionsPage = lazy(() =>
 	import('./pages/collections/CollectionsPage')

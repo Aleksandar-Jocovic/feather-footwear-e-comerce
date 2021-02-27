@@ -2,6 +2,8 @@ import styled from 'styled-components';
 
 export const CollectionItemContainer = styled.div`
 	width: 250px;
+	max-width: 250px;
+
 	height: 320px;
 	overflow: hidden;
 	position: relative;
@@ -17,6 +19,7 @@ export const BackgroundImage = styled.div`
 	top: -40px;
 	background-position: center;
 	background-size: contain;
+	background-repeat: no-repeat;
 	background-image: ${({ img }) => `url(${img})`};
 `;
 
@@ -49,6 +52,7 @@ export const NameContainer = styled.span`
 	text-transform: uppercase;
 	color: #4d434f;
 	font-weight: normal;
+	word-wrap: break-word;
 	position: relative;
 	top: -40px;
 

@@ -31,7 +31,7 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
 				...additionalData
 			});
 		} catch (err) {
-			console.log('error creatin user', err.message);
+			console.log('error creating user', err.message);
 		}
 	}
 
@@ -55,6 +55,19 @@ export const addCollectionAndDocuments = async (
 	});
 
 	return await batch.commit();
+};
+
+export const getUserCartRef = async userId => {
+	const cartsRef = firestore.collection('carts').where('userId', '==', userId);
+	const snapShot = await cartsRef.get();
+
+	if (snapShot.empty) {
+		const cartDocRef = firestore.collection('carts').doc();
+		await cartDocRef.set({ userId, cartItems: [] });
+		return cartDocRef;
+	} else {
+		return snapShot.docs[0].ref;
+	}
 };
 
 export const convertCollectionsSnapshotToMap = collections => {
